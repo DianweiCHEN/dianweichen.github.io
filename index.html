@@ -48,8 +48,12 @@
     <main class="main">
       <!-- HOME -->
       <section id="panel-home" class="panel active" role="tabpanel">
-        <div class="hero">
-          <div class="hero-intro">
+        <div class="hero hero--split">
+          <figure class="hero-portrait">
+            <img src="assets/selfie.jpg" alt="Dianwei Chen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="hero-placeholder" style="display:none;" aria-hidden="true">Photo</div>
+          </figure>
+          <div class="hero-id">
             <h1 class="hero-title">Dianwei Chen</h1>
             <p class="hero-tagline">Ph.D. Candidate · Civil &amp; Environmental Engineering · University of Maryland, College Park</p>
             <div class="hero-av-pills" aria-hidden="true">
@@ -58,63 +62,32 @@
               <span class="hero-av-pill">Simulation</span>
             </div>
             <p class="hero-toolchain">CARLA · SUMO · ROS · PRGP</p>
-          </div>
-          <div class="hero-photos">
-            <figure class="hero-image hero-image--selfie">
-              <img src="assets/selfie.jpg" alt="Dianwei Chen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="hero-placeholder" style="display:none;" aria-hidden="true">Photo</div>
-            </figure>
-            <figure class="hero-image hero-image--max">
-              <img src="assets/max.jpg" alt="Max with the M-Trail AV" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-              <div class="hero-placeholder" style="display:none;" aria-hidden="true">Max with the M-Trail AV</div>
-            </figure>
-          </div>
-          <div class="terps-strip" role="presentation">
-            <img src="assets/maryland-under-armour-football-uniforms-pride-2013_900xx960-539-0-74.jpg" alt="">
-            <span class="terps-badge">Go Terps · University of Maryland</span>
-          </div>
-        </div>
-        <div class="content-block content-block--about">
-          <h2>About me</h2>
-          <p class="about-lead">I build simulation and AI tools to make <strong>autonomous vehicles</strong> safer—especially when the road gets icy, the scenario gets messy, or the AI hits an edge case.</p>
-          <blockquote class="about-quote">All models are wrong, but some are useful. <cite>— George Box</cite></blockquote>
-          <div class="stats-row">
-            <div class="stat-card">
-              <div class="stat-number" data-count="12">12</div>
-              <div class="stat-label">Publications</div>
+            <p class="hero-lead">I build simulation and AI tools to make <strong>autonomous vehicles</strong> safer—especially when the road gets icy, the scenario gets messy, or the AI hits an edge case.</p>
+            <div class="hero-links">
+              <a href="mailto:dwchen98@umd.edu">Email</a>
+              <a href="https://scholar.google.com/citations?user=0EVALfUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+              <a href="https://github.com/DianweiCHEN" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/dianwei-chen-513092185/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
-            <div class="stat-card">
-              <div class="stat-number" data-count="6">6</div>
-              <div class="stat-label">Published</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number" data-count="6">6</div>
-              <div class="stat-label">Preprints</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number" data-count="3">3</div>
-              <div class="stat-label">Universities</div>
+            <div class="stats-row">
+              <div class="stat-card">
+                <div class="stat-number" data-count="12">12</div>
+                <div class="stat-label">Publications</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-count="6">6</div>
+                <div class="stat-label">Published</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-count="6">6</div>
+                <div class="stat-label">Preprints</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" data-count="3">3</div>
+                <div class="stat-label">Universities</div>
+              </div>
             </div>
           </div>
-          <div class="prose" style="margin-top:1.25rem">
-            <p>I'm <strong>Dianwei Chen</strong>, a Ph.D. candidate in <strong>Civil &amp; Environmental Engineering</strong> at the <strong>University of Maryland, College Park</strong>, advised by <strong>Prof. Terry Yang</strong>. I'm part of the <strong>M-Trail Lab</strong>, where we work on cyberinfrastructure and digital twins for transportation. Before UMD, I received my M.S. in Electrical &amp; Computer Engineering from <strong>The Ohio State University</strong> (with Prof. Keith Redmill and Prof. Umit Özgüner) and my B.E. from <strong>Zhejiang University</strong>.</p>
-            <p>My research sits at the intersection of <strong>reinforcement learning</strong>, <strong>digital twins</strong>, <strong>AV safety evaluation</strong>, and <strong>vision–language models</strong>. I focus on <em>how to test and validate autonomous systems in conditions that are hard to replicate in the real world</em>—winter weather, rare pedestrian behaviors, and safety-critical edge cases. To do that, I build and use high-fidelity simulation (e.g. <strong>CARLA–SUMO</strong> co-simulation), physics-informed models such as <strong>Physics Regularized Gaussian Processes (PRGP)</strong>, and RL-based behavior models to stress-test AVs and find failure modes before they hit the road.</p>
-            <p>I also work on the bridge from simulation to deployment: I've contributed to <strong>ROS and Autoware</strong> integration on real test vehicles (including PCD mapping and trajectory planning) and care deeply about open-source, reproducible tools for the AV and smart-transportation community.</p>
-            <p>If you're interested in collaboration, internships, or just talking about safe autonomy and digital twins, feel free to <a href="mailto:dwchen98@umd.edu">reach out</a>.</p>
-          </div>
-        </div>
-        <div class="content-block content-block--research">
-          <h2>Research interests</h2>
-          <ul class="tag-list" role="list">
-            <li>Reinforcement Learning for AV control</li>
-            <li>Digital Twins & simulation</li>
-            <li>Autonomous Vehicle Safety</li>
-            <li>Vision Large Language Models</li>
-            <li>Vision-Language-Action (VLA) models</li>
-            <li>CARLA-SUMO co-simulation</li>
-            <li>Physics Regularized Gaussian Process (PRGP)</li>
-            <li>Pedestrian behavior & edge-case AV failures</li>
-          </ul>
         </div>
         <div class="content-block content-block--featured">
           <h2>Featured work</h2>
@@ -144,6 +117,47 @@
               <span class="featured-cta" aria-hidden="true">arXiv →</span>
             </a>
           </div>
+        </div>
+        <div class="content-block content-block--homenews">
+          <h2>Latest news</h2>
+          <ul class="home-news" role="list">
+            <li class="home-news-item">
+              <span class="home-news-date">Jun 2026</span>
+              <span class="home-news-text">New preprint <em>SALSA</em> on safe social navigation with vision–language–action models. <a href="https://arxiv.org/abs/2606.10495" target="_blank" rel="noopener noreferrer">arXiv</a></span>
+            </li>
+            <li class="home-news-item">
+              <span class="home-news-date">May 2026</span>
+              <span class="home-news-text"><em>INSIGHT</em> accepted at the 2026 IEEE Intelligent Vehicles Symposium (IV) Workshops. <a href="https://arxiv.org/abs/2502.00262" target="_blank" rel="noopener noreferrer">arXiv</a></span>
+            </li>
+            <li class="home-news-item">
+              <span class="home-news-date">May 2026</span>
+              <span class="home-news-text"><em>Network Digital Untwinning</em> accepted at IEEE 46th ICDCS 2026, Seoul. <a href="https://arxiv.org/abs/2605.00169" target="_blank" rel="noopener noreferrer">arXiv</a></span>
+            </li>
+          </ul>
+          <p class="home-news-more"><a href="#" class="nav-inline" data-tab="news">All news →</a></p>
+        </div>
+        <div class="content-block content-block--about">
+          <h2>About me</h2>
+          <blockquote class="about-quote">All models are wrong, but some are useful. <cite>— George Box</cite></blockquote>
+          <div class="prose">
+            <p>I'm <strong>Dianwei Chen</strong>, a Ph.D. candidate in <strong>Civil &amp; Environmental Engineering</strong> at the <strong>University of Maryland, College Park</strong>, advised by <strong>Prof. Terry Yang</strong>. I'm part of the <strong>M-Trail Lab</strong>, where we work on cyberinfrastructure and digital twins for transportation. Before UMD, I received my M.S. in Electrical &amp; Computer Engineering from <strong>The Ohio State University</strong> (with Prof. Keith Redmill and Prof. Umit Özgüner) and my B.E. from <strong>Zhejiang University</strong>.</p>
+            <p>My research sits at the intersection of <strong>reinforcement learning</strong>, <strong>digital twins</strong>, <strong>AV safety evaluation</strong>, and <strong>vision–language models</strong>. I focus on <em>how to test and validate autonomous systems in conditions that are hard to replicate in the real world</em>—winter weather, rare pedestrian behaviors, and safety-critical edge cases. To do that, I build and use high-fidelity simulation (e.g. <strong>CARLA–SUMO</strong> co-simulation), physics-informed models such as <strong>Physics Regularized Gaussian Processes (PRGP)</strong>, and RL-based behavior models to stress-test AVs and find failure modes before they hit the road.</p>
+            <p>I also work on the bridge from simulation to deployment: I've contributed to <strong>ROS and Autoware</strong> integration on real test vehicles (including PCD mapping and trajectory planning) and care deeply about open-source, reproducible tools for the AV and smart-transportation community.</p>
+            <p>If you're interested in collaboration, internships, or just talking about safe autonomy and digital twins, feel free to <a href="mailto:dwchen98@umd.edu">reach out</a>.</p>
+          </div>
+        </div>
+        <div class="content-block content-block--research">
+          <h2>Research interests</h2>
+          <ul class="tag-list" role="list">
+            <li>Reinforcement Learning for AV control</li>
+            <li>Digital Twins & simulation</li>
+            <li>Autonomous Vehicle Safety</li>
+            <li>Vision Large Language Models</li>
+            <li>Vision-Language-Action (VLA) models</li>
+            <li>CARLA-SUMO co-simulation</li>
+            <li>Physics Regularized Gaussian Process (PRGP)</li>
+            <li>Pedestrian behavior & edge-case AV failures</li>
+          </ul>
         </div>
         <div class="content-block content-block--timeline">
           <h2>Timeline</h2>
