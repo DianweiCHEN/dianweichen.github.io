@@ -88,8 +88,165 @@ a, button, [role="button"], .nav-link, .icon-link, .tag-list li, .nav-inline {
   flex: 1;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 4rem;
+  padding: 2.5rem 2rem 3rem;
   width: 100%;
+}
+
+/* ---------- Sidebar layout (persistent left rail) ---------- */
+.layout {
+  display: flex;
+  align-items: flex-start;
+}
+.sidebar {
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  flex: 0 0 280px;
+  width: 280px;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.75rem 1.5rem;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-right: 1px solid var(--border);
+  box-shadow: 2px 0 24px rgba(0,0,0,.08);
+  z-index: 50;
+}
+.content {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 4px);
+}
+.content .main { flex: 1; }
+
+/* Sidebar identity */
+.sidebar-portrait {
+  margin: 0 auto;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255,255,255,.7);
+  box-shadow: 0 8px 28px rgba(0,0,0,.25);
+  transition: transform var(--t-spring), box-shadow var(--t-mid), border-color var(--t-fast);
+}
+.sidebar-portrait:hover {
+  transform: scale(1.04);
+  box-shadow: 0 14px 36px rgba(226,24,51,.28);
+  border-color: var(--umd-red);
+}
+.sidebar-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sidebar .hero-placeholder { height: 140px; }
+.sidebar-name {
+  text-decoration: none;
+  text-align: center;
+  margin-top: 0.25rem;
+}
+.sidebar-name .logo {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--text);
+  transition: color var(--t-fast);
+}
+.sidebar-name:hover .logo { color: var(--umd-red); }
+.sidebar-tagline {
+  margin: 0;
+  text-align: center;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* Sidebar nav (vertical) */
+.sidebar .nav {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.3rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.sidebar .nav-link {
+  text-align: left;
+  text-transform: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  border-radius: 8px;
+  padding: 0.55rem 0.85rem;
+}
+.sidebar .nav-link::after { display: none; }
+.sidebar .nav-link:hover { transform: translateX(3px); box-shadow: none; }
+.sidebar .nav-link.active {
+  background: var(--accent-soft);
+  box-shadow: inset 3px 0 0 var(--umd-red);
+}
+
+/* Sidebar links */
+.sidebar-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+.sidebar-links .icon-link { font-size: 0.72rem; padding: 0.28rem 0.55rem; }
+
+/* Home intro block */
+.content-block--intro .hero-title { text-align: left; margin: 0 0 0.6rem; }
+.content-block--intro .hero-av-pills { justify-content: flex-start; margin-top: 0; }
+.content-block--intro .hero-toolchain { text-align: left; }
+.content-block--intro .hero-lead {
+  margin: 1rem 0 0;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+.content-block--intro .stats-row { margin-top: 1.5rem; }
+
+/* Responsive: collapse sidebar to a top bar */
+@media (max-width: 880px) {
+  .layout { flex-direction: column; }
+  .sidebar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    flex-basis: auto;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1rem 0.85rem;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 16px rgba(0,0,0,.1);
+  }
+  .sidebar-portrait { width: 84px; height: 84px; }
+  .sidebar .hero-placeholder { height: 84px; }
+  .sidebar-name { margin-top: 0; }
+  .sidebar-name .logo { font-size: 1.2rem; }
+  .sidebar-tagline { display: none; }
+  .sidebar .nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0;
+  }
+  .sidebar .nav-link { padding: 0.4rem 0.7rem; font-size: 0.85rem; }
+  .sidebar .nav-link:hover { transform: translateY(-2px); }
+  .sidebar .nav-link.active { box-shadow: 0 0 0 1.5px var(--umd-red); }
+  .sidebar-links { margin-top: 0; padding-top: 0; justify-content: center; }
+  .content { min-height: 0; }
 }
 
 /* ---------- UMD Top accent bar ---------- */

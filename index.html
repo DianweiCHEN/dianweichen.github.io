@@ -24,68 +24,62 @@
 <body>
   <div class="page-wrap">
     <div class="umd-topbar" aria-hidden="true"></div>
-    <header class="site-header">
-      <a href="#" class="logo-wrap" data-tab="home">
-        <span class="logo">Dianwei Chen</span>
-      </a>
-      <nav class="nav" role="tablist">
-        <a href="#" class="nav-link active" data-tab="home" role="tab" aria-selected="true">Home</a>
-        <a href="#" class="nav-link" data-tab="publications" role="tab" aria-selected="false">Publications</a>
-        <a href="#" class="nav-link" data-tab="cv" role="tab" aria-selected="false">CV</a>
-        <a href="#" class="nav-link" data-tab="transcript" role="tab" aria-selected="false">Transcript</a>
-        <a href="#" class="nav-link" data-tab="news" role="tab" aria-selected="false">News</a>
-        <a href="#" class="nav-link" data-tab="services" role="tab" aria-selected="false">Services</a>
-        <a href="#" class="nav-link" data-tab="personal" role="tab" aria-selected="false">Personal</a>
-      </nav>
-      <div class="header-links">
-        <a href="mailto:dwchen98@umd.edu" class="icon-link" title="Email">Email</a>
-        <a href="https://scholar.google.com/citations?user=0EVALfUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="icon-link" title="Google Scholar">Scholar</a>
-        <a href="https://github.com/DianweiCHEN" target="_blank" rel="noopener noreferrer" class="icon-link" title="GitHub">GitHub</a>
-        <a href="https://www.linkedin.com/in/dianwei-chen-513092185/" target="_blank" rel="noopener noreferrer" class="icon-link" title="LinkedIn">LinkedIn</a>
-      </div>
-    </header>
+    <div class="layout">
+      <aside class="sidebar">
+        <figure class="sidebar-portrait">
+          <img src="assets/selfie.jpg" alt="Dianwei Chen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="hero-placeholder" style="display:none;" aria-hidden="true">Photo</div>
+        </figure>
+        <a href="#" class="logo-wrap sidebar-name" data-tab="home">
+          <span class="logo">Dianwei Chen</span>
+        </a>
+        <p class="sidebar-tagline">Ph.D. Candidate<br>Civil &amp; Environmental Engineering<br>University of Maryland</p>
+        <nav class="nav" role="tablist">
+          <a href="#" class="nav-link active" data-tab="home" role="tab" aria-selected="true">Home</a>
+          <a href="#" class="nav-link" data-tab="publications" role="tab" aria-selected="false">Publications</a>
+          <a href="#" class="nav-link" data-tab="cv" role="tab" aria-selected="false">CV</a>
+          <a href="#" class="nav-link" data-tab="transcript" role="tab" aria-selected="false">Transcript</a>
+          <a href="#" class="nav-link" data-tab="news" role="tab" aria-selected="false">News</a>
+          <a href="#" class="nav-link" data-tab="services" role="tab" aria-selected="false">Services</a>
+          <a href="#" class="nav-link" data-tab="personal" role="tab" aria-selected="false">Personal</a>
+        </nav>
+        <div class="sidebar-links">
+          <a href="mailto:dwchen98@umd.edu" class="icon-link" title="Email">Email</a>
+          <a href="https://scholar.google.com/citations?user=0EVALfUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="icon-link" title="Google Scholar">Scholar</a>
+          <a href="https://github.com/DianweiCHEN" target="_blank" rel="noopener noreferrer" class="icon-link" title="GitHub">GitHub</a>
+          <a href="https://www.linkedin.com/in/dianwei-chen-513092185/" target="_blank" rel="noopener noreferrer" class="icon-link" title="LinkedIn">LinkedIn</a>
+        </div>
+      </aside>
 
-    <main class="main">
+      <div class="content">
+        <main class="main">
       <!-- HOME -->
       <section id="panel-home" class="panel active" role="tabpanel">
-        <div class="hero hero--split">
-          <figure class="hero-portrait">
-            <img src="assets/selfie.jpg" alt="Dianwei Chen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="hero-placeholder" style="display:none;" aria-hidden="true">Photo</div>
-          </figure>
-          <div class="hero-id">
-            <h1 class="hero-title">Dianwei Chen</h1>
-            <p class="hero-tagline">Ph.D. Candidate · Civil &amp; Environmental Engineering · University of Maryland, College Park</p>
-            <div class="hero-av-pills" aria-hidden="true">
-              <span class="hero-av-pill">AV Safety</span>
-              <span class="hero-av-pill">Digital Twins</span>
-              <span class="hero-av-pill">Simulation</span>
+        <div class="content-block content-block--intro">
+          <h1 class="hero-title">Dianwei Chen</h1>
+          <div class="hero-av-pills" aria-hidden="true">
+            <span class="hero-av-pill">AV Safety</span>
+            <span class="hero-av-pill">Digital Twins</span>
+            <span class="hero-av-pill">Simulation</span>
+          </div>
+          <p class="hero-toolchain">CARLA · SUMO · ROS · PRGP</p>
+          <p class="hero-lead">I build simulation and AI tools to make <strong>autonomous vehicles</strong> safer—especially when the road gets icy, the scenario gets messy, or the AI hits an edge case.</p>
+          <div class="stats-row">
+            <div class="stat-card">
+              <div class="stat-number" data-count="12">12</div>
+              <div class="stat-label">Publications</div>
             </div>
-            <p class="hero-toolchain">CARLA · SUMO · ROS · PRGP</p>
-            <p class="hero-lead">I build simulation and AI tools to make <strong>autonomous vehicles</strong> safer—especially when the road gets icy, the scenario gets messy, or the AI hits an edge case.</p>
-            <div class="hero-links">
-              <a href="mailto:dwchen98@umd.edu">Email</a>
-              <a href="https://scholar.google.com/citations?user=0EVALfUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
-              <a href="https://github.com/DianweiCHEN" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="https://www.linkedin.com/in/dianwei-chen-513092185/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <div class="stat-card">
+              <div class="stat-number" data-count="6">6</div>
+              <div class="stat-label">Published</div>
             </div>
-            <div class="stats-row">
-              <div class="stat-card">
-                <div class="stat-number" data-count="12">12</div>
-                <div class="stat-label">Publications</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number" data-count="6">6</div>
-                <div class="stat-label">Published</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number" data-count="6">6</div>
-                <div class="stat-label">Preprints</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number" data-count="3">3</div>
-                <div class="stat-label">Universities</div>
-              </div>
+            <div class="stat-card">
+              <div class="stat-number" data-count="6">6</div>
+              <div class="stat-label">Preprints</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" data-count="3">3</div>
+              <div class="stat-label">Universities</div>
             </div>
           </div>
         </div>
@@ -440,11 +434,13 @@
           </div>
         </div>
       </section>
-    </main>
+        </main>
 
-    <footer class="site-footer">
-      <p>&copy; <span id="footer-year">2026</span> Dianwei Chen · <a href="https://cee.umd.edu" target="_blank" rel="noopener noreferrer">Department of Civil and Environmental Engineering</a> · University of Maryland, College Park</p>
-    </footer>
+        <footer class="site-footer">
+          <p>&copy; <span id="footer-year">2026</span> Dianwei Chen · <a href="https://cee.umd.edu" target="_blank" rel="noopener noreferrer">Department of Civil and Environmental Engineering</a> · University of Maryland, College Park</p>
+        </footer>
+      </div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
